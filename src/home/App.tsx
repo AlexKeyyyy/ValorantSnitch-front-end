@@ -17,7 +17,7 @@ function App() {
 
   const onSubmit: SubmitHandler<IFormState> = data => {
     setIsLoading(true)
-    fetch(process.env.REACT_APP_API_URL, {
+    fetch(`${process.env.REACT_APP_API_URL}`, {
       method: 'POST',
       headers: {
         'Content-Type' : 'application/json',
