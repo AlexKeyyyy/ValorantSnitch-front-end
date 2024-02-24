@@ -17,7 +17,7 @@ function App() {
 
   const onSubmit: SubmitHandler<IFormState> = data => {
     setIsLoading(true)
-    fetch('http://localhost:5000/api', {
+    fetch(process.env.REACT_APP_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type' : 'application/json',
